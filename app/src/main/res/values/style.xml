@@ -1,0 +1,8 @@
+<resources>
+    <style name="CustomButtonStyle">
+        <item name="android:background">@drawable/custom_button_background</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <!-- Altri attributi di stile desiderati -->
+    </style>
+</resources>

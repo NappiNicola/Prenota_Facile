@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registrazione"
+    android:background="#FF7043">
+
+    <TextView
+        android:id="@+id/RegText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="REGISTRAZIONE"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_below="@id/RegText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp"
+        >
+        <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp"
+        style="@style/LL_Style">
+
+            <!-- Nome -->
+            <TextView
+                android:id="@+id/NomeLabel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="NOME"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/NomeInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:maxLength="50"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <!-- Cognome -->
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            style="@style/LL_Style">
+
+            <TextView
+                android:id="@+id/CognomeLabel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="COGNOME"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/CognomeInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:maxLength="50"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <!-- Codice Fiscale -->
+        <LinearLayout
+            android:id="@+id/ll5"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            style="@style/LL_Style">
+
+            <TextView
+                android:id="@+id/CFLabel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="CODICE FISCALE"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/CFInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:maxLength="16"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+
+        <!-- Password -->
+        <LinearLayout
+            android:id="@+id/ll6"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            style="@style/LL_Style">
+
+            <TextView
+                android:id="@+id/PasswordLabel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="PASSWORD"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:background="@drawable/border"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/PasswordInput"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                android:textSize="15dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/Register"
+            android:onClick="registrazion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="REGISTRATI"
+            style="@style/CustomButtonStyle"
+            />
+
+        <Button
+            android:id="@+id/Login"
+            android:onClick="login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:text="LOG-IN"
+            style="@style/CustomButtonStyle"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

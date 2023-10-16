@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AreaUtente"
+    android:background="#FF7043">
+
+    <TextView
+        android:id="@+id/BenvenutoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="BENVENUTO"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_below="@id/BenvenutoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp">
+
+    <Button
+        android:id="@+id/NewPrenotazione"
+        android:onClick="prenota"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="10dp"
+        android:text="NUOVA PRENOTAZIONE"
+        style="@style/CustomButtonStyle"
+        />
+
+    <Button
+        android:id="@+id/deletePrenotazione"
+        android:onClick="deleteP"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="CANCELLA PRENOTAZIONE"
+        style="@style/CustomButtonStyle"
+        />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/ListaText"
+        android:layout_below="@id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="LISTA PRENOTAZIONI"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="@drawable/border"
+        />
+
+   <ScrollView
+       android:layout_below="@id/ListaText"
+       android:layout_marginTop="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="20dp"
+       android:scrollbars="vertical">
+
+       <TextView
+           android:id="@+id/cronologia"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="@color/white"
+           />
+
+   </ScrollView>
+
+    <Button
+        android:id="@+id/logOut"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="25dp"
+        android:onClick="logOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="LOG-OUT"
+        style="@style/CustomButtonStyle"
+        />
+</RelativeLayout>

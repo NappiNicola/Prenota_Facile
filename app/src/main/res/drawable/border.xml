@@ -1,0 +1,10 @@
+<shape xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+    <solid android:color="#DD2C00" /> <!-- Colore di riempimento del bordo -->
+    <stroke
+    android:width="5dp"
+    android:color="#00B8D4"
+    />
+    <corners android:radius="8dp"/>
+</shape>
