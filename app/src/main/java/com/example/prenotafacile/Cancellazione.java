@@ -51,6 +51,17 @@ public class Cancellazione extends AppCompatActivity {
         String id_ = idInsert.getText().toString().trim();
         mydb.DeletePrenotazioneByID(id_);
 
+        idInsert.setText("");
+        listaP.setText("");
+        Cursor cursor = mydb.getListaVisita(cf);
+        if(cursor != null){
+            while(cursor.moveToNext()){
+                listaP.append("ID] " + cursor.getString(0) + " --> " + cursor.getString(1) + " : " + cursor.getString(2) +
+                        cursor.getString(3) + "\n");
+                listaP.append("------------------------------------------------\n");
+            }
+        }
+
     }
 
     public void back(View v){
